@@ -15,20 +15,20 @@ public class LoginPage_Michele {
 
     //-----------------------------------------webElements-----------------------------------------------------------
     @FindBy (xpath ="//input[@placeholder = 'Email address']" )
-    public static WebElement emailInputBox;
+    public WebElement emailInputBox;
 
 
     @FindBy (xpath = "//input[@placeholder = 'Password']")
-    public static WebElement passwordInputBox;
+    public WebElement passwordInputBox;
 
 
     @FindBy (xpath = "//button[.= 'Sign in']")
-    public static WebElement signInButton;
+    public WebElement signInButton;
 
 
     //-------------------------------------------methods-----------------------------------------------------------
 
-    public static void loginWithUser(String userType){
+    public void loginWithUser(String userType){
         String username= ConfigurationReader.getProperty(userType+"_username");
         String password=ConfigurationReader.getProperty(userType+"_password");
 
