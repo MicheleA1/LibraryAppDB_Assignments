@@ -40,8 +40,9 @@ public class US02_StepDefs_Michele {
         String query = "SELECT count(*) FROM book_borrow WHERE is_returned = 0";
         DB_Util.runQuery(query);
         expectedBorrowedBooks = DB_Util.getFirstRowFirstColumn();
+        System.out.println("expectedBorrowedBooks = " + expectedBorrowedBooks);
 
-        Assert.assertEquals(actualBorrowedBooks, expectedBorrowedBooks, "Borrowed Books DB Verification FAIL");
+        Assert.assertEquals(actualBorrowedBooks, expectedBorrowedBooks);
     }
 
 
